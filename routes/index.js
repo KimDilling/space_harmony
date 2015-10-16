@@ -12,7 +12,7 @@ router.post('/likes', function(req, res, next) {
 	//if like = true {
 		//name.collection.prepend({});
 
-	}
+	// } 
 });
 
 module.exports = router;

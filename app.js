@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/index');
 var app = express();
+var mongoose = require('mongoose');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -22,7 +23,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Mongoose connection
-var mongoose = require('mongoose');
+
 mongoose.connect(process.env.MONGO_DB_CONN_SPACE_HARMONY);
 
 app.use('/', routes);
