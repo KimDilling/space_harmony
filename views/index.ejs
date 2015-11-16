@@ -1,20 +1,20 @@
 <% include ./partials/header %>
+<head>
+  <style>
+    #jam{
+      position: absolute;
+    }
+
+  </style>
+</head>
 
   <section class="row">
     <div class="col-md-6 col-md-offset-3 col-sm-10 col-sm-offset-1 main-corgi">
-      <h2>Do you like <%//= Name %>Dr. Fluffington?</h2>
-      <img src="<%//= dogPic %>http://www.shanalogic.com/wordpress/wp-content/uploads2/2015/03/l-Professor-Corgi.jpg" alt="<%//= dogName %>Dr. Fluffington" class="corgi-banner img-responsive">
+      <img id="#jam" src="<%=sup%>">
+
       <button id="paw-left">Paw Left</button>
       <button id="paw-right">Paw Right</button>
     </div>
-  </section>
-
-  <section>
-    <h3>Characters You've Liked</h3>
-    <% for (var i = 0; i < names.length; i++) { %>
-      <h6><%//= names[i].Name %></h6>
-      <img src="<%//= names[i].namePic %>" class="corgi-profile">
-    <% } %>
   </section>
 
 <% include ./partials/footer %>

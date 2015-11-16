@@ -2,7 +2,7 @@
 // /models/user.js
 var mongoose = require('mongoose');
 
-var userSchema = new mongoose.Schema({
+var charactersSchema = new mongoose.Schema({
   name: { type: String, required: true },
   img: { type: String, required: true, unique: true },
   like: { type: Boolean },
@@ -10,7 +10,7 @@ var userSchema = new mongoose.Schema({
   updated_at: Date
 });
 
-var User = mongoose.model('User', userSchema);
+var Characters = mongoose.model('Characters', charactersSchema);
 
 // Make this available to our other files
-module.exports = User;
+module.exports = Characters;
